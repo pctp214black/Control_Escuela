@@ -1,0 +1,45 @@
+###Get all students
+GET http://localhost:1234/students
+
+###Get all students by status
+GET http://localhost:1234/students?status=Baja
+
+###GET student by Id
+GET http://localhost:1234/students/724ca54a-c691-11ee-80a9-0a002700000c
+###Create a student
+POST http://localhost:1234/students
+Content-Type: application/json
+
+{
+    "first_name":"Juan",
+    "last_first_name":"Medrano",
+    "last_second_name":"Garcia",
+    "email":"juanito123@gmail.com",
+    "password":"1234",
+    "telephone":"4491936596"
+}
+
+###Update a student
+PATCH http://localhost:1234/students/002436f7-c692-11ee-80a9-0a002700000a
+Content-Type: application/json
+
+{
+    "telephone":"4491936597",
+    "email":"inventaado@homtail.com",
+    "status":"Baja",
+    "hola":"malomao"
+}
+
+###Delete physically a student
+DELETE http://localhost:1234/students/fcf182db-c685-11ee-80a9-0a002700000e
+###SignedUp a student in a Course
+POST http://localhost:1234/students/course
+Content-Type: application/json
+
+{
+    "id_student":"002436f7-c692-11ee-80a9-0a002700000a",
+    "id_course":"724d64e1-c691-11ee-80a9-0a002700000b"
+}
+
+###Disenroll a student from Course
+DELETE http://localhost:1234/students/724caa21-c691-11ee-80a9-0a002700000a/course/724d64e1-c691-11ee-80a9-0a002700000a

@@ -1,0 +1,19 @@
+{
+  "name": "control_escuela",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "mySQLApp": "node --watch ./mySQLApp.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "4.18.2",
+    "mysql2": "3.9.1",
+    "zod": "3.22.4"
+  }
+}

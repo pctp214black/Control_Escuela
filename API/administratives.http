@@ -1,0 +1,34 @@
+###Get all administratives
+GET http://localhost:1234/administratives
+
+###Get all administratives by occupation
+GET http://localhost:1234/administratives?occupation1=maestro&occupation2=director
+
+###Get all administratives by id
+GET http://localhost:1234/administratives/0263b296-c888-11ee-80a9-0a002700000a
+
+###Create a new Administrative
+POST http://localhost:1234/administratives
+Content-Type: application/json
+
+{
+    "first_name":"Alexis",
+    "last_first_name":"Rodriguez",
+    "last_second_name":"Hola",
+    "email":"alex1234@hotmail.com",
+    "password":"yosoyAlex212",
+    "telephone":"4497856473",
+    "occupation":["maestro","director"]
+}
+
+###Update an Administrative
+PATCH  http://localhost:1234/administratives/41d7a30f-cc68-11ee-bee4-0a002700000a
+Content-Type: application/json
+
+{
+    "last_second_name":"Remedios",
+    "occupation":["maestro"]
+}
+
+###Delete an Administrative
+DELETE http://localhost:1234/administratives/e386848a-c897-11ee-80a9-0a002700000a

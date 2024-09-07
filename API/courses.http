@@ -1,0 +1,38 @@
+###Get all courses
+GET http://localhost:1234/courses
+
+###Get course by ID
+GET http://localhost:1234/courses/8b4cda8-ca9f-11ee-80a9-0a002700000a
+
+###Create a new Course
+POST http://localhost:1234/courses
+Content-Type: application/json
+
+{
+    "subject_course":"Algebra",
+    "grade_course":1,
+    "group_course":"B",
+    "idAdministrative":"41d7a30f-cc68-11ee-bee4-0a002700000a"
+}
+
+###Update a Course
+PATCH http://localhost:1234/courses/619f9664-cc68-11ee-bee4-0a002700000a
+Content-Type: application/json
+
+{
+    "subject_course":"Algebra I",
+    "group_course":"C"
+}
+
+###Delete a Course
+DELETE http://localhost:1234/courses/619f9664-cc68-11ee-bee4-0a002700000a
+
+###AttendanceList
+POST http://localhost:1234/courses/attendanceList
+Content-Type: application/json
+
+{
+    "idStudent":"1d25df00-cc68-11ee-bee4-0a002700000a",
+    "idCourse":"4d08b837-d01b-11ee-92e7-0a002700000a",
+    "idAttendance_Status":"presente"
+}
